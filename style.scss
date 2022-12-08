@@ -25,6 +25,7 @@ body {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         min-height: 88vh;
+        gap: 20px;
         .main-content {
             margin-right: 163px;
             >p {
@@ -42,6 +43,7 @@ body {
                 height: 48px;
                 background: linear-gradient(203.2deg, #37AEE2 21.67%, #1E96C8 70%);
                 border-radius: 8px;
+                border: none;
                 @include fonts.b1();
                 cursor: pointer;
                 color: #ffffff;
@@ -55,12 +57,7 @@ body {
 }
 
 .footer {
-    // position: absolute;
-    // bottom: 0px;
-    // left: 50%;
-    // transform: translateX(-50%);
     .footer-wrapper {
-        width: 1200px;
         .contacts-block {
             padding: 41px 0px;
             .contacts-wrapper {
@@ -127,8 +124,29 @@ body {
     }
 }
 
+// Laptop
+@media(max-width: 1200px) {
+    .main {
+        .wrapper {
+            .main-content {
+                margin-right: 50px;
+            }
+        }
+    }
+}
+
 // Tablet
 @media(max-width: 992px) {
+    .main {
+        .wrapper {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            padding: 24px 0px;
+            .main-content {
+                margin-right: 0px;
+            }
+        }
+    }
     .footer {
         .footer-wrapper {
             .contacts-block {
@@ -156,8 +174,44 @@ body {
     }
 }
 
+@media(max-width: 590px) {
+    .main {
+        .wrapper {
+            >img{
+                width: 100%;
+            }
+        }
+    }
+}
+
 // Mobile
 @media(max-width: 576px) {
+    .main {
+        .wrapper {
+            >img{
+                padding: 0px 50px;
+            }
+            .main-content {
+                text-align: center;
+                >p{
+                    text-align: left;
+                }
+                >img{
+                    width: 80px;
+                }
+                .main-header {
+                    @include fonts.mobileH6();
+                    margin-top: 15px;
+                }
+                .main-text {
+                    @include fonts.mobileT6();
+                }
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
     .footer {
         .footer-wrapper {
             .contacts-block {

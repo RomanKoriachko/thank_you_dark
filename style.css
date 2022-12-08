@@ -75,6 +75,7 @@ body {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   min-height: 88vh;
+  gap: 20px;
 }
 .main .wrapper .main-content {
   margin-right: 163px;
@@ -100,6 +101,7 @@ body {
   height: 48px;
   background: linear-gradient(203.2deg, #37AEE2 21.67%, #1E96C8 70%);
   border-radius: 8px;
+  border: none;
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -112,9 +114,6 @@ body {
   gap: 10px;
 }
 
-.footer .footer-wrapper {
-  width: 1200px;
-}
 .footer .footer-wrapper .contacts-block {
   padding: 41px 0px;
 }
@@ -180,7 +179,20 @@ body {
   background-image: url(images/icon-facebook.svg);
 }
 
+@media (max-width: 1200px) {
+  .main .wrapper .main-content {
+    margin-right: 50px;
+  }
+}
 @media (max-width: 992px) {
+  .main .wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 24px 0px;
+  }
+  .main .wrapper .main-content {
+    margin-right: 0px;
+  }
   .footer .footer-wrapper .contacts-block .contacts-wrapper {
     flex-direction: column;
     align-items: center;
@@ -199,7 +211,40 @@ body {
     margin-left: 17px;
   }
 }
+@media (max-width: 590px) {
+  .main .wrapper > img {
+    width: 100%;
+  }
+}
 @media (max-width: 576px) {
+  .main .wrapper > img {
+    padding: 0px 50px;
+  }
+  .main .wrapper .main-content {
+    text-align: center;
+  }
+  .main .wrapper .main-content > p {
+    text-align: left;
+  }
+  .main .wrapper .main-content > img {
+    width: 80px;
+  }
+  .main .wrapper .main-content .main-header {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 145%;
+    margin-top: 15px;
+  }
+  .main .wrapper .main-content .main-text {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+  }
+  .main .wrapper .main-content button {
+    width: 100%;
+  }
   .footer .footer-wrapper .contacts-block .contacts-wrapper {
     gap: 24px;
   }
