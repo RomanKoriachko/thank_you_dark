@@ -74,7 +74,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  min-height: 88vh;
+  min-height: calc(100vh - 116px);
   gap: 20px;
 }
 .main .wrapper .main-content {
@@ -108,10 +108,14 @@ body {
   line-height: 19px;
   cursor: pointer;
   color: #ffffff;
+  transition: 0.3s all;
 }
 .main .wrapper .main-content button .telegram-btn-content {
   justify-content: center;
   gap: 10px;
+}
+.main .wrapper .main-content button:hover {
+  transform: translateY(10%);
 }
 
 .footer .footer-wrapper .contacts-block {
@@ -186,6 +190,7 @@ body {
 }
 @media (max-width: 992px) {
   .main .wrapper {
+    min-height: 100%;
     grid-template-columns: 1fr;
     justify-items: center;
     padding: 24px 0px;
